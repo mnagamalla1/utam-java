@@ -1,0 +1,35 @@
+{
+  "methods": [
+    {
+      "name": "test",
+      "compose": [
+        {
+          "returnType" : "boolean",
+          "element": "root",
+          "apply": "waitFor",
+          "args": [
+            {
+              "name" : "redundant",
+              "type" : "function",
+              "predicate": [
+                {
+                  "element" : "root",
+                  "apply" : "getText",
+                  "matcher" : {
+                    "type" : "stringEquals",
+                    "args" : [
+                      {
+                        "name" : "matcherArg",
+                        "type" : "string"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

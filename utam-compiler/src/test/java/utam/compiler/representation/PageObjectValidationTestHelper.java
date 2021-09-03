@@ -203,7 +203,7 @@ public class PageObjectValidationTestHelper {
     if (expected.importedTypes.size() > 0) {
       Set<String> actualImports = getAllImports(actual.getImports());
       String imports = actualImports.isEmpty()? "empty" : String.join(", ", actualImports);
-      String assertionStr = String.format("method '%s' imports are: %s", actual.getName(), imports);
+      String assertionStr = String.format("method '%s' interface imports are: %s", actual.getName(), imports);
       assertThat(
           assertionStr,
           actualImports,

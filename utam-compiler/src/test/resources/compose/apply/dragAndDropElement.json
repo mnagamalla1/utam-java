@@ -1,0 +1,34 @@
+{
+  "elements": [
+    {
+      "name": "first",
+      "selector": {
+        "css": ".foo[%s]",
+        "args": [
+          {
+            "type" : "string",
+            "name" : "selectorArg1"
+          }
+        ]
+      },
+      "type" : ["draggable"]
+    }
+  ],
+  "methods": [
+    {
+      "name": "test",
+      "compose": [
+        {
+          "element" : "first",
+          "apply": "dragAndDrop",
+          "args": [
+            {
+              "type": "element",
+              "name": "elementArg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import utam.compiler.grammar.UtamArgument;
+import utam.compiler.grammar.UtamArgument.UtamArgumentLiteralPrimitive;
 import utam.core.declarative.representation.TypeProvider;
 
 /**
@@ -83,11 +84,11 @@ public enum DraggableActionType implements ActionType {
   public UtamArgument[] getTransformedArgs(UtamArgument[] args) {
     if (this == dragAndDrop && args.length == 1) {
       // add default duration as 0
-      return new UtamArgument[]{args[0], new UtamArgument.UtamArgumentLiteral(0)};
+      return new UtamArgument[]{args[0], new UtamArgumentLiteralPrimitive(0)};
     }
     if (this == dragAndDropByOffset && args.length == 2) {
       // add default duration as 0
-      return new UtamArgument[]{args[0], args[1], new UtamArgument.UtamArgumentLiteral(0)};
+      return new UtamArgument[]{args[0], args[1], new UtamArgumentLiteralPrimitive(0)};
     }
     return args;
   }

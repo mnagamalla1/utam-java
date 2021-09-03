@@ -1,0 +1,32 @@
+{
+  "beforeLoad" : [
+    {
+      "element" : "root",
+      "apply" : "waitFor",
+      "args" : [
+        {
+          "type" : "function",
+          "predicate" : [
+            {
+              "element" : "document",
+              "apply" : "getUrl",
+              "matcher" : {
+                "type" : "stringContains",
+                "args" : [
+                  {
+                    "value" : "home"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element" : "root",
+      "apply" : "getText",
+      "returnType" : "string"
+    }
+  ]
+}

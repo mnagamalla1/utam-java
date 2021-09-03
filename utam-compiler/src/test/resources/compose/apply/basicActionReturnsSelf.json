@@ -1,0 +1,27 @@
+{
+  "elements": [
+    {
+      "name": "test",
+      "selector": {
+        "css": ".css"
+      }
+    }
+  ],
+  "methods": [
+    {
+      "name": "test",
+      "compose": [
+        {
+          "element": "test",
+          "apply": "getText"
+        },
+        {
+          "element": "test",
+          "apply": "getClass",
+          "returnType" : "self",
+          "returnAll": true
+        }
+      ]
+    }
+  ]
+}
